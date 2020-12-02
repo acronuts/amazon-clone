@@ -1,8 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { auth } from './firebass';
-import './Login.css'
+import { auth } from '../../firebass';
+import './index.css'
 
 function Login() {
     const history = useHistory();

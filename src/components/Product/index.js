@@ -1,10 +1,15 @@
-import React from 'react';
-import './Product.css';
-import { useStateValue } from './StateProvider';
+import React, { useState } from 'react';
+import './index.css';
+import { useStateValue } from '../../StateProvider';
+// import { Modal } from '../Modal/'
 
 function Product({ id, title, image, price, rating }) {
-
+    // const [showModal, setShowModal] = useState(false);
     const [{ basket }, dispatch] = useStateValue();
+
+    // const openModal = () => {
+    //     setShowModal(prev => !prev);
+    // };
 
     const addToBasket = () => {
         dispatch({
@@ -20,7 +25,9 @@ function Product({ id, title, image, price, rating }) {
     };
 
     return (
-        <div className="product">
+        <div className="product">  
+            {/* inside div ^^--> onClick={openModal}  */}
+            {/* <Modal showModal={showModal} setShowModal={setShowModal} /> */}
             <div className="product__info">
                 <p>{title}</p>
                 <p className="product__price">
